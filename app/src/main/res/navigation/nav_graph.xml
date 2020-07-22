@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/RostersListFragment"
-        android:name="com.dakkaplace.rooster.Infrastructure.RostersListFragment"
+        android:name="com.dakkaplace.rooster.Presentation.RostersListFragment"
         android:label="@string/rosters_list_fragment_label"
-        tools:layout="@layout/rosters_list">
+        tools:layout="@layout/rosters_list_fragment">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
@@ -17,9 +17,9 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="com.dakkaplace.rooster.Presentation.SecondFragment"
+        android:name="com.dakkaplace.rooster.Presentation.RosterFormFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/roster_form_fragment">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"

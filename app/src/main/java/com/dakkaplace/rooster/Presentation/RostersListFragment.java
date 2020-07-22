@@ -1,5 +1,6 @@
-package com.dakkaplace.rooster.Infrastructure;
+package com.dakkaplace.rooster.Presentation;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,12 +8,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dakkaplace.rooster.Application.RosterStorage;
-import com.dakkaplace.rooster.Presentation.RosterAdapter;
+import com.dakkaplace.rooster.EditRosterActivity;
+import com.dakkaplace.rooster.Infrastructure.AndroidRosterStorage;
+import com.dakkaplace.rooster.MainActivity;
 import com.dakkaplace.rooster.R;
 
 public class RostersListFragment extends Fragment {
@@ -24,7 +26,7 @@ public class RostersListFragment extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.rosters_list, container, false);
+        return inflater.inflate(R.layout.rosters_list_fragment, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -44,8 +46,11 @@ public class RostersListFragment extends Fragment {
         view.findViewById(R.id.addRosterButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(RostersListFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                Intent intent = new Intent(getActivity(), EditRosterActivity.class);
+                startActivity(intent);
+
+                /*NavHostFragment.findNavController(RostersListFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment);*/
             }
         });
     }

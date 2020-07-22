@@ -21,16 +21,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle("Roster list");
+        toolbar.setTitle(R.string.roster_list_title);
 
-        FloatingActionButton addRosterButton = findViewById(R.id.addRosterButton);
+        /*FloatingActionButton addRosterButton = findViewById(R.id.addRosterButton);
         addRosterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Add new Roster", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
     }
 
     @Override
@@ -54,4 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
