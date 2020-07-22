@@ -1,4 +1,4 @@
-package com.dakkaplace.rooster.Infrastructure;
+package com.dakkaplace.rooster.Presentation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,8 +46,7 @@ final public class RosterAdapter extends RecyclerView.Adapter<RosterAdapter.Rost
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(@NonNull RosterViewHolder holder, int position) {
-        holder.textView.setText(rosterDataset.get(position).getTitle());
-
+        holder.getTextView().setText(rosterDataset.get(position).getTitle());
     }
 
     // Return the size of your dataset (invoked by the layout manager)

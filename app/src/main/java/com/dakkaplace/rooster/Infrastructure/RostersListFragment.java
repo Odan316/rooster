@@ -1,4 +1,4 @@
-package com.dakkaplace.rooster;
+package com.dakkaplace.rooster.Infrastructure;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,12 +12,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.dakkaplace.rooster.Application.RosterStorage;
-import com.dakkaplace.rooster.Domain.Roster;
-import com.dakkaplace.rooster.Infrastructure.AndroidRosterStorage;
-import com.dakkaplace.rooster.Infrastructure.RosterAdapter;
-
-import java.util.ArrayList;
-import java.util.Iterator;
+import com.dakkaplace.rooster.Presentation.RosterAdapter;
+import com.dakkaplace.rooster.R;
 
 public class RostersListFragment extends Fragment {
 
@@ -45,7 +41,7 @@ public class RostersListFragment extends Fragment {
         RosterAdapter rosterAdapter = new RosterAdapter(rosterStorage.getAll());
         recyclerView.setAdapter(rosterAdapter);
 
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
+        view.findViewById(R.id.addRosterButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(RostersListFragment.this)
