@@ -5,7 +5,7 @@ import com.dakkaplace.rooster.Domain.Roster;
 
 import java.util.ArrayList;
 
-final public class AndroidRosterStorage implements RosterStorage {
+final public class StubRosterStorage implements RosterStorage {
 
     @Override
     public ArrayList<Roster> getAll() {

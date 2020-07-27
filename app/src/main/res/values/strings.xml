@@ -11,4 +11,5 @@
     <string name="roster_list_title">Rosters</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="edit_roster_label">Edit roster</string>
+    <string name="button_confirm">Confirm</string>
 </resources>

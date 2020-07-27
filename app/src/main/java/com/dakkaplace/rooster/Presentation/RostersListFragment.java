@@ -13,8 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.dakkaplace.rooster.Application.RosterStorage;
 import com.dakkaplace.rooster.EditRosterActivity;
-import com.dakkaplace.rooster.Infrastructure.AndroidRosterStorage;
-import com.dakkaplace.rooster.MainActivity;
+import com.dakkaplace.rooster.Infrastructure.StubRosterStorage;
 import com.dakkaplace.rooster.R;
 
 public class RostersListFragment extends Fragment {
@@ -38,7 +37,7 @@ public class RostersListFragment extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(view.getContext());
         recyclerView.setLayoutManager(layoutManager);
 
-        RosterStorage rosterStorage = new AndroidRosterStorage();
+        RosterStorage rosterStorage = new StubRosterStorage();
 
         RosterAdapter rosterAdapter = new RosterAdapter(rosterStorage.getAll());
         recyclerView.setAdapter(rosterAdapter);
